@@ -97,18 +97,17 @@ export default function ContactPage() {
         </Card>
       </div>
 
-       {/* Map Section - Placeholder */}
+       {/* Map Section */}
       <section className="mt-16">
         <h2 className="text-3xl font-headline font-semibold text-center mb-8">Visit Us</h2>
         <div className="aspect-[16/9] bg-muted rounded-lg shadow-lg overflow-hidden">
-          {/* In a real app, you'd embed a Google Map or similar here. For now, a placeholder image. */}
           <Image 
-            src="https://placehold.co/1200x675.png" 
-            alt="Map placeholder showing cafe location"
+            src="/interior.jpg" 
+            alt="Interior view of the cafe"
             width={1200}
             height={675}
             className="w-full h-full object-cover"
-            data-ai-hint="city map"
+            data-ai-hint="cafe interior"
           />
         </div>
       </section>
