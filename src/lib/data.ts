@@ -45,7 +45,7 @@ export const menuItems: MenuItem[] = [
     description: 'A delightful mix of strawberries, blueberries, raspberries, banana, and almond milk.',
     price: 7.50,
     category: 'Smoothies',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/berry-smoothie.jpg',
     dataAiHint: 'berry smoothie',
   },
   {
@@ -54,7 +54,7 @@ export const menuItems: MenuItem[] = [
     description: 'Rich espresso with steamed milk, topped with a thin layer of foam.',
     price: 4.50,
     category: 'Coffee',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/latte.jpg',
     dataAiHint: 'latte coffee',
     customizableOptions: [
       { id: 'milk-type', name: 'Milk Type', options: [
@@ -77,7 +77,7 @@ export const menuItems: MenuItem[] = [
     description: 'Chilled coffee served over ice, perfect for a warm day.',
     price: 3.75,
     category: 'Coffee',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/iced-coffee.jpg',
     dataAiHint: 'iced coffee',
   }
 ];
