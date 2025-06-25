@@ -13,12 +13,11 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative text-center h-[60vh] flex flex-col justify-center items-center rounded-xl overflow-hidden shadow-2xl">
         <Image 
-          src="https://placehold.co/1600x900.png" 
-          alt="View of a cozy cafe and its patrons through a large window from the street." 
+          src="/exterior.jpg" 
+          alt="Exterior view of The Daily Brew cafe" 
           fill
           priority
           className="object-cover z-0"
-          data-ai-hint="cafe window"
         />
         <div className="absolute inset-0 bg-black/50 z-10"></div> {/* Overlay */}
         <div className="relative z-20 p-8 space-y-6">
