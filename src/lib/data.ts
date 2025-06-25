@@ -7,7 +7,7 @@ export const menuItems: MenuItem[] = [
     description: 'Crispy sourdough topped with fresh avocado, chili flakes, and a hint of lime.',
     price: 8.50,
     category: 'Food',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/avocado-toast.jpg',
     dataAiHint: 'avocado toast',
     customizableOptions: [
       { id: 'add-egg', name: 'Add Poached Egg', options: [{ id: 'poached-egg', name: 'Yes', priceChange: 2.00 }], allowsMultiple: false },
@@ -20,7 +20,7 @@ export const menuItems: MenuItem[] = [
     description: 'Scrambled eggs, cheese, black beans, and salsa wrapped in a warm tortilla.',
     price: 9.00,
     category: 'Food',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/breakfast-burrito.jpg',
     dataAiHint: 'breakfast burrito',
   },
   {
@@ -29,7 +29,7 @@ export const menuItems: MenuItem[] = [
     description: 'Spinach, kale, banana, pineapple, and coconut water for a healthy boost.',
     price: 7.00,
     category: 'Smoothies',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/kale-smoothie.jpg',
     dataAiHint: 'green smoothie',
     customizableOptions: [
       { id: 'protein-boost', name: 'Protein Boost', options: [
