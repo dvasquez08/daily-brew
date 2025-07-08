@@ -35,13 +35,13 @@ export default function MenuPage() {
       <section className="text-center">
         <h1 className="text-4xl md:text-5xl font-headline font-semibold mb-4 text-primary">Our Menu</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Explore our wide range of delicious food, refreshing smoothies, and expertly brewed coffee. 
+          Explore our wide range of delicious food, refreshing smoothies, and expertly brewed coffee.
           Customize your order to make it just right for you!
         </p>
       </section>
 
       <Tabs defaultValue={defaultTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-8">
+        <TabsList className="flex flex-col sm:flex-row items-center justify-center gap-6 my-20 sm:bg-muted/50 rounded-lg p-2"> {/* Modified this line */}
           {categories.map((category) => (
             <TabsTrigger key={category} value={category} className="text-sm sm:text-base py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
               {categoryIcons[category]}

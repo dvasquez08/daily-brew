@@ -11,8 +11,7 @@ import { useState } from 'react';
 
 const navLinks = [
   { href: '/menu', label: 'Menu', icon: <ListOrdered className="h-5 w-5" /> },
-  { href: '/smoothie-ai', label: 'AI Smoothie', icon: <Sparkles className="h-5 w-5" /> },
-  { href: '/order-history', label: 'Order History', icon: <History className="h-5 w-5" /> },
+  { href: '/order-delivery', label: 'Order for Delivery', icon: <ShoppingBag className="h-5 w-5" /> },
   { href: '/contact', label: 'Contact Us', icon: <Sparkles className="h-5 w-5" /> }, // Placeholder icon
 ];
 
@@ -37,22 +36,6 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="relative">
-                <ShoppingBag className="h-6 w-6" />
-                {totalItems > 0 && (
-                  <Badge variant="destructive" className="absolute -top-1 -right-1 h-5 w-5 justify-center rounded-full p-0">
-                    {totalItems}
-                  </Badge>
-                )}
-                <span className="sr-only">Open Cart</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent className="w-[400px] sm:w-[540px] flex flex-col">
-              <CartSheetContent />
-            </SheetContent>
-          </Sheet>
 
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>

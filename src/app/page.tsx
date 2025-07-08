@@ -11,25 +11,25 @@ export default function HomePage() {
   return (
     <div className="space-y-16 py-8">
       {/* Hero Section */}
-      <section className="relative text-center h-[60vh] flex flex-col justify-center items-center rounded-xl overflow-hidden shadow-2xl">
-        <Image 
-          src="/exterior.jpg" 
-          alt="Exterior view of The Daily Brew cafe" 
+      <section className="relative text-center h-[80vh] flex flex-col justify-center items-center rounded-xl overflow-hidden shadow-2xl">
+        <Image
+          src="/exterior.jpg"
+          alt="Exterior view of The Daily Brew cafe"
           fill
           priority
           className="object-cover z-0"
         />
-        <div className="absolute inset-0 bg-black/50 z-10"></div> {/* Overlay */}
-        <div className="relative z-20 p-8 space-y-6">
-          <h1 className="text-5xl md:text-7xl font-headline font-bold text-white leading-tight">
+        <div className="absolute inset-0 bg-black/10 z-10"></div> {/* Overlay */}
+        <div className="relative z-20 p-4 sm:p-8 space-y-4 sm:space-y-6"> {/* Adjusted padding and space for small screens */}
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-headline font-bold text-white leading-tight"> {/* Smaller text on mobile, scales up */}
             Welcome to <span className="text-primary">The Daily Brew</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto px-2"> {/* Smaller text on mobile, scales up, added horizontal padding for small screens */}
             Your perfect escape for aromatic coffees, refreshing smoothies, and delightful bites in a cozy atmosphere.
           </p>
-          <Button size="lg" asChild className="bg-accent hover:bg-accent/80 text-accent-foreground text-lg px-8 py-6 shadow-md transition-transform hover:scale-105">
+          <Button size="sm" className="bg-accent hover:bg-accent/80 text-accent-foreground text-base px-6 py-4 sm:text-lg sm:px-8 sm:py-6 shadow-md transition-transform hover:scale-105"> {/* Smaller button on mobile, scales up */}
             <Link href="/menu">
-              Explore Our Menu <ArrowRight className="ml-2 h-5 w-5" />
+              Explore Our Menu <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" /> {/* Smaller icon on mobile */}
             </Link>
           </Button>
         </div>
@@ -91,46 +91,20 @@ export default function HomePage() {
                 <p className="text-lg font-semibold text-primary mt-2">${item.price.toFixed(2)}</p>
               </CardContent>
               <CardFooter className="p-4 pt-0">
-                 <Button asChild className="w-full bg-primary hover:bg-primary/90">
-                    <Link href={`/menu#${item.category.toLowerCase()}`}>View Details</Link>
-                 </Button>
+                <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                  <Link href={`/menu#${item.category.toLowerCase()}`}>View Details</Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
         <div className="text-center mt-8">
-            <Button variant="outline" asChild>
-                <Link href="/menu">See Full Menu <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
+          <Button variant="outline" asChild>
+            <Link href="/menu">See Full Menu <ArrowRight className="ml-2 h-4 w-4" /></Link>
+          </Button>
         </div>
       </section>
 
-      {/* AI Smoothie Teaser */}
-      <section className="bg-secondary/50 p-8 md:p-12 rounded-xl shadow-lg">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-headline font-semibold mb-4">Can't Decide on a Smoothie?</h2>
-            <p className="text-lg text-secondary-foreground mb-6">
-              Let our AI craft a personalized smoothie suggestion based on your favorite flavors and dietary needs. It's fun, easy, and delicious!
-            </p>
-            <Button size="lg" asChild className="bg-accent hover:bg-accent/80 text-accent-foreground shadow-md transition-transform hover:scale-105">
-              <Link href="/smoothie-ai">
-                Try AI Smoothie Suggester <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-          <div className="md:w-1/2 flex justify-center">
-             <Image 
-                src="https://placehold.co/400x300.png" 
-                alt="Colorful smoothie ingredients"
-                width={400}
-                height={300}
-                className="rounded-lg shadow-md"
-                data-ai-hint="smoothie ingredients"
-             />
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
