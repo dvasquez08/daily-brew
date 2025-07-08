@@ -1,5 +1,3 @@
-# Firebase Studio
+# The Daily Brew
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+Welcome! This is a sample site for a cafe/restaurant. The name of this cafe for this project is the daily brew.
